@@ -824,12 +824,7 @@ store.winstoretestmode = false;
             cordova.exec(success, errorCb(fail), "InAppBillingPlugin", "getProductDetails", [ skus ]);
         }
     };
-    InAppBilling.prototype.setTestMode = function(success, fail) {
-        if (this.options.showLog) {
-            log("setTestMode called!");
-        }
-        return cordova.exec(success, errorCb(fail), "InAppBillingPlugin", "setTestMode", [ "" ]);
-    };
+    
     function errorCb(fail) {
         return function(error) {
             if (!fail) return;
